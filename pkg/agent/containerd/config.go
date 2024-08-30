@@ -46,7 +46,7 @@ func writeContainerdHosts(cfg *config.Node, containerdConfig templates.Container
 	hosts := getHostConfigs(containerdConfig.PrivateRegistryConfig, containerdConfig.NoDefaultEndpoint, mirrorAddr)
 
 	// Clean up previous configuration templates
-	os.RemoveAll(cfg.Containerd.Registry)
+	// os.RemoveAll(cfg.Containerd.Registry)
 
 	// Write out new templates
 	for host, config := range hosts {
